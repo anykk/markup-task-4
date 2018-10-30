@@ -1,0 +1,145 @@
+body
+{
+    margin: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    font: 400 16px 'Roboto', sans-serif;
+}
+
+main
+{
+    margin-top: 8px;
+}
+
+input[type='checkbox']
+{
+    margin: 0;
+    display: none;
+}
+
+header label
+{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 48px;
+    width: 48px;
+    transform: rotate(-90deg);
+    transition-duration: .35s;
+}
+
+header h1
+{
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    font: 500 54px/60px 'Roboto', sans-serif;
+    width: calc(85% - 48px);
+}
+
+input[type='checkbox']:checked ~ header label
+{
+    transform: none;
+}
+
+.cat-card
+{
+    display: inline-block;
+    border: 1px solid #d6d6d6;
+    vertical-align: top;
+    margin: 12px;
+    width: 256px;
+}
+
+.cat-card:hover
+{
+    box-shadow: 0 0 6px 1px rgba(130, 130, 130, .6);
+}
+
+.img-container
+{
+    overflow: hidden;
+}
+
+img
+{
+    width: 256px;
+    height: 198px;
+}
+
+img:hover
+{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition-duration: .75s;
+}
+
+.cat-card h2
+{
+    margin: 0;
+    margin-top: 6px;
+    margin-left: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cat-card h2 a,
+.cat-card a:visited,
+.cat-card h2 a:active
+{
+    text-decoration: none;
+    color: #000;
+}
+
+.cat-card h2 a:hover
+{
+    text-decoration: underline;
+}
+
+.cat-card .short-description,
+.cat-card .full-description
+{
+    color: #808080;
+    padding: 12px;
+}
+
+.short-description p
+{
+    margin: 0;
+}
+
+.short-description p:last-of-type
+{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.full-description
+{
+    display: none;
+}
+
+input[type='checkbox']:checked ~ main .cat-card
+{
+    display: block;
+    width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type='checkbox']:checked ~ main .cat-card img
+{
+    width: 640px;
+    height: 480px;
+}
+
+input[type='checkbox']:checked ~ main .cat-card .short-description
+{
+    display: none;
+}
+
+input[type='checkbox']:checked ~ main .cat-card .full-description
+{
+    display: block;
+}
